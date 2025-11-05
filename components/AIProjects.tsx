@@ -54,11 +54,11 @@ export default function AIProjects() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="inline-block mb-4"
           >
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary-500/10 to-accent-500/10 border border-primary-500/20">
-              <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent-100 dark:bg-accent-900/20 border border-accent-200 dark:border-accent-500/30">
+              <svg className="w-5 h-5 text-accent-700 dark:text-accent-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
-              <span className="gradient-text font-medium text-sm">AI Explorations</span>
+              <span className="text-accent-700 dark:text-accent-200 font-medium text-sm">AI Explorations</span>
             </div>
           </motion.div>
 
@@ -84,18 +84,18 @@ export default function AIProjects() {
                 rel={project.url !== '#' ? 'noopener noreferrer' : undefined}
                 className="block h-full group"
               >
-                <div className="h-full bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover-lift hover:border-primary-500/50 dark:hover:border-primary-500/50 transition-all duration-300">
+                <div className="h-full bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover-lift hover:border-accent-400 dark:hover:border-accent-500 transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <div className="text-4xl flex-shrink-0 transform group-hover:scale-110 transition-transform duration-300">
                       {project.icon}
                     </div>
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-2">
-                        <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                        <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-accent-700 dark:group-hover:text-accent-300 transition-colors">
                           {project.name}
                         </h3>
                         {project.url !== '#' && (
-                          <svg className="w-5 h-5 text-slate-400 group-hover:text-primary-600 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-5 h-5 text-slate-400 group-hover:text-accent-600 dark:group-hover:text-accent-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                           </svg>
                         )}
@@ -107,7 +107,7 @@ export default function AIProjects() {
                         {project.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-xs font-medium"
+                            className="px-3 py-1 bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-300 rounded-full text-xs font-medium border border-accent-200 dark:border-accent-700/30"
                           >
                             {tag}
                           </span>

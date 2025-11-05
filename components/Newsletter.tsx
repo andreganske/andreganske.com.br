@@ -17,8 +17,8 @@ export default function Newsletter() {
   ]
 
   return (
-    <section id="newsletter" className="py-20 px-4 bg-gradient-to-br from-primary-950 via-slate-900 to-slate-950 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(14,165,233,0.1),rgba(255,255,255,0))]" />
+    <section id="newsletter" className="py-20 px-4 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(43,176,237,0.05),rgba(255,255,255,0))]" />
 
       <div className="max-w-4xl mx-auto relative z-10" ref={ref}>
         <motion.div
@@ -33,11 +33,11 @@ export default function Newsletter() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="inline-block mb-4"
           >
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/20">
-              <svg className="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent-900/20 border border-accent-500/30">
+              <svg className="w-5 h-5 text-accent-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <span className="text-primary-300 font-medium text-sm">Newsletter</span>
+              <span className="text-accent-200 font-medium text-sm">Newsletter</span>
             </div>
           </motion.div>
 
@@ -71,7 +71,7 @@ export default function Newsletter() {
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <svg className="w-6 h-6 text-primary-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-6 h-6 text-accent-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span className="text-slate-300">{item}</span>
@@ -90,7 +90,7 @@ export default function Newsletter() {
               href="https://featureoubug.substack.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-xl font-semibold shadow-lg hover:shadow-glow transition-all duration-300 group"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-accent-600 hover:bg-accent-700 text-white rounded-xl font-semibold shadow-medium transition-all duration-300 group"
             >
               <span>Subscribe to Newsletter</span>
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
