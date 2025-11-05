@@ -1,0 +1,11 @@
+Vou precisar corrigir manualmente as strings problemáticas. O problema está nas aspas simples dentro de strings com aspas simples.
+
+Por exemplo, na linha 90:
+'Continuous value delivery and the 'ship or improve?' dilemma'
+
+Deveria ser:
+"Continuous value delivery and the 'ship or improve?' dilemma"
+
+ou:
+'Continuous value delivery and the \'ship or improve?\' dilemma'
+
