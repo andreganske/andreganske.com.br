@@ -2,9 +2,12 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,10 +18,12 @@ export default function Navigation() {
   }, [])
 
   const navItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
+    { nameKey: 'nav.about', href: '#about' },
+    { nameKey: 'nav.experience', href: '#experience' },
+    { nameKey: 'nav.skills', href: '#skills' },
+    { nameKey: 'nav.aiProjects', href: '#ai-projects' },
+    { nameKey: 'nav.newsletter', href: '#newsletter' },
+    { nameKey: 'nav.contact', href: '#contact' },
   ]
 
   return (
@@ -42,25 +47,26 @@ export default function Navigation() {
             AG
           </motion.a>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <motion.a
-                key={item.name}
+                key={item.nameKey}
                 href={item.href}
-                className="text-slate-700 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
+                className="text-slate-700 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium text-sm"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {item.name}
+                {t(item.nameKey)}
               </motion.a>
             ))}
+            <LanguageSwitcher />
             <motion.a
               href="#contact"
-              className="px-6 py-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-full font-medium shadow-lg hover:shadow-glow transition-all duration-300"
+              className="px-6 py-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-full font-medium shadow-lg hover:shadow-glow transition-all duration-300 text-sm"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Let's Talk
+              {t('nav.letsTalk')}
             </motion.a>
           </div>
         </div>
