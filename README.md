@@ -50,10 +50,30 @@ This generates a static site in the `out/` directory, ready for deployment to Gi
 
 ## 🚢 Deployment
 
-The site is configured for GitHub Pages deployment with:
-- Static export enabled
-- Custom domain support via CNAME file
-- `.nojekyll` file for proper routing
+### Quick Start
+
+1. **Configure GitHub Pages** (Settings → Pages)
+   - Set Source to **GitHub Actions** (not "Deploy from branch")
+
+2. **Merge to main and push**
+   ```bash
+   git checkout main
+   git merge claude/ai-pm-portfolio-site-011CUoQhEfCnLMEjtjc5nMQx
+   git push
+   ```
+
+3. **Done!** GitHub Actions will automatically build and deploy.
+
+The site will be live at https://andreganske.com.br
+
+For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
+
+### Features
+
+- ✅ Automated deployment via GitHub Actions
+- ✅ Static export (no server required)
+- ✅ Custom domain support (andreganske.com.br)
+- ✅ Optimized for performance
 
 ## 📄 License
 
