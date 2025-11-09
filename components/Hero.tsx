@@ -5,33 +5,20 @@ import { motion } from 'framer-motion'
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-primary-950">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(14,165,233,0.1),rgba(255,255,255,0))]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(217,70,239,0.1),rgba(255,255,255,0))]" />
+      {/* Clean background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(43,176,237,0.05),rgba(255,255,255,0))]" />
       </div>
 
-      {/* Floating orbs */}
+      {/* Subtle floating orbs */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-600/10 rounded-full blur-3xl"
         animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
+          scale: [1, 1.1, 1],
+          opacity: [0.2, 0.3, 0.2],
         }}
         transition={{
           duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl"
-        animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{
-          duration: 10,
           repeat: Infinity,
           ease: "easeInOut",
         }}
@@ -47,10 +34,10 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="flex justify-center"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 text-sm text-slate-300">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-900/20 border border-accent-500/30 text-sm text-accent-200">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-400"></span>
               </span>
               Available for new opportunities
             </div>
@@ -65,7 +52,7 @@ export default function Hero() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
               Andre Ganske
             </h1>
-            <div className="h-1 w-32 mx-auto bg-gradient-to-r from-primary-500 to-accent-500 rounded-full" />
+            <div className="h-1 w-32 mx-auto bg-gradient-to-r from-accent-600 to-accent-400 rounded-full" />
           </motion.div>
 
           {/* Subtitle */}
@@ -83,12 +70,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed"
           >
             Specializing in{' '}
-            <span className="text-primary-400 font-semibold">AI & Risk Intelligence</span>,{' '}
-            <span className="text-accent-400 font-semibold">Anti-Fraud Systems</span>, and{' '}
-            <span className="text-primary-400 font-semibold">Product-Led Growth</span>
+            <span className="text-accent-300 font-semibold">AI & Risk Intelligence</span>,{' '}
+            <span className="text-accent-200 font-semibold">Anti-Fraud Systems</span>, and{' '}
+            <span className="text-accent-300 font-semibold">Product-Led Growth</span>
             {' '}with 15+ years building impactful products at scale
           </motion.p>
 
@@ -101,17 +88,16 @@ export default function Hero() {
           >
             <motion.a
               href="#contact"
-              className="group relative px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-xl font-semibold shadow-lg overflow-hidden"
+              className="px-8 py-4 bg-accent-600 hover:bg-accent-700 text-white rounded-xl font-semibold shadow-medium transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="relative z-10">Get in Touch</span>
-              <div className="absolute inset-0 bg-gradient-shine bg-[length:200%_100%] opacity-0 group-hover:opacity-100 group-hover:animate-shine" />
+              Get in Touch
             </motion.a>
 
             <motion.a
               href="#about"
-              className="px-8 py-4 glass-card text-white rounded-xl font-semibold hover-lift"
+              className="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white rounded-xl font-semibold transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -136,7 +122,7 @@ export default function Hero() {
                 href={social.href}
                 target={social.icon !== 'email' ? '_blank' : undefined}
                 rel={social.icon !== 'email' ? 'noopener noreferrer' : undefined}
-                className="w-12 h-12 flex items-center justify-center rounded-full glass border border-white/10 text-slate-400 hover:text-white hover:border-primary-500/50 transition-all duration-300"
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-800/50 border border-slate-700 text-slate-400 hover:text-white hover:bg-slate-700 hover:border-accent-500 transition-all duration-300"
                 aria-label={social.label}
                 whileHover={{ y: -4, scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
