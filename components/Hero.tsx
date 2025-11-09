@@ -43,40 +43,51 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Main heading */}
+          {/* Name */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
-              Andre Ganske
-            </h1>
-            <div className="h-1 w-32 mx-auto bg-gradient-to-r from-accent-600 to-accent-400 rounded-full" />
+            <p className="text-xl md:text-2xl text-slate-400 mb-3">Andre Ganske</p>
           </motion.div>
 
-          {/* Subtitle */}
-          <motion.h2
+          {/* Main headline - value proposition */}
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-semibold gradient-text"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight max-w-5xl mx-auto"
           >
-            Senior Product Manager
-          </motion.h2>
+            Building intelligent systems that understand people, manage risk, and drive growth
+          </motion.h1>
 
-          {/* Description */}
-          <motion.p
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+          >
+            <div className="h-1 w-32 mx-auto bg-gradient-to-r from-accent-600 to-accent-400 rounded-full mb-6" />
+          </motion.div>
+
+          {/* Subtitle - positioning */}
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl lg:text-2xl font-medium text-accent-200 max-w-4xl mx-auto mb-4"
           >
-            Specializing in{' '}
-            <span className="text-accent-300 font-semibold">AI & Risk Intelligence</span>,{' '}
-            <span className="text-accent-200 font-semibold">Anti-Fraud Systems</span>, and{' '}
-            <span className="text-accent-300 font-semibold">Product-Led Growth</span>
-            {' '}with 15+ years building impactful products at scale
+            Senior Product Manager | AI & Risk Intelligence | Product-Led Growth | Human-Centered Automation
+          </motion.h2>
+
+          {/* Supporting line */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            className="text-base md:text-lg text-slate-400 max-w-2xl mx-auto"
+          >
+            15+ years of product leadership building impactful solutions at scale
           </motion.p>
 
           {/* CTA Buttons */}
@@ -84,24 +95,24 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap gap-4 justify-center pt-4"
+            className="flex flex-wrap gap-4 justify-center pt-6"
           >
             <motion.a
-              href="#contact"
-              className="px-8 py-4 bg-accent-600 hover:bg-accent-700 text-white rounded-xl font-semibold shadow-medium transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get in Touch
-            </motion.a>
-
-            <motion.a
               href="#about"
-              className="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white rounded-xl font-semibold transition-colors"
+              className="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-primary-900 rounded-xl font-semibold shadow-medium transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               View My Work
+            </motion.a>
+
+            <motion.a
+              href="#contact"
+              className="px-8 py-4 bg-transparent hover:bg-slate-800 border-2 border-accent-500 hover:border-accent-400 text-white rounded-xl font-semibold transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Get in Touch
             </motion.a>
           </motion.div>
 
