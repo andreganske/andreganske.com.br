@@ -7,7 +7,7 @@ import { useRef } from 'react'
 const projects = [
   {
     name: 'NeuroBloom',
-    url: 'https://neurobloom.com',
+    url: 'https://neurobloom.com.br',
     description: 'AI-first app to help people overcome cold-call anxiety and prepare for conversations more effectively',
     icon: '🧠',
     tags: ['Mental Health', 'AI Coach', 'Communication'],
@@ -20,18 +20,25 @@ const projects = [
     tags: ['FinTech', 'Open Finance', 'Relationships'],
   },
   {
-    name: 'VeriTrace',
-    url: 'https://veritrace.ai',
-    description: 'AI focused on fraud detection in images and documents',
-    icon: '🔍',
-    tags: ['Fraud Detection', 'Computer Vision', 'Security'],
+    name: 'PM Fofo',
+    url: 'https://chatgpt.com/g/g-683f92d35c948191a4c2d3739525f62d-pm-fofo',
+    description: 'Ajuda PMs a estruturar iniciativas com discovery e foco em outcomes',
+    icon: '🎯',
+    tags: ['Product Management', 'GPT', 'Discovery'],
   },
   {
-    name: 'PM Fofo',
-    url: '#',
-    description: 'Custom GPT to support PMs in building customized career plans aligned with company needs',
-    icon: '🤖',
-    tags: ['Career Development', 'GPT', 'Product Management'],
+    name: 'Adalberto da RFC',
+    url: 'https://chatgpt.com/g/g-676345be2de88191b10d7e0e3a52d76b-adalberto-da-rfc',
+    description: 'Cria e revisa RFCs tecnicas com clareza e colaboracao',
+    icon: '📋',
+    tags: ['Technical Writing', 'RFC', 'Collaboration'],
+  },
+  {
+    name: 'Adalberto do BDD',
+    url: 'https://chatgpt.com/g/g-67325832e5108190b2ac528183c0134a-adalberto-do-bdd',
+    description: 'Technical specification expert using BDD principles',
+    icon: '🔧',
+    tags: ['BDD', 'Testing', 'Specifications'],
   },
 ]
 
@@ -70,7 +77,7 @@ export default function AIProjects() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.name}
@@ -129,7 +136,7 @@ export default function AIProjects() {
         >
           <p className="text-slate-600 dark:text-slate-400">
             Each project is an experiment in applying AI to solve real-world problems,
-            from mental health to financial wellness and security.
+            from mental health and financial wellness to technical documentation and testing.
           </p>
         </motion.div>
       </div>
