@@ -42,10 +42,13 @@ export default function Newsletter() {
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Feature or Bug Newsletter
+            Feature or Bug
           </h2>
-          <p className="text-xl text-slate-300 font-medium">
-            Real product management insights from the trenches no buzzwords, no fluff.
+          <p className="text-xl text-slate-300 font-medium mb-2">
+            Real product insights, no buzzwords.
+          </p>
+          <p className="text-base text-slate-400">
+            Delivered twice a month • 1,000+ readers
           </p>
         </motion.div>
 
@@ -56,9 +59,18 @@ export default function Newsletter() {
           className="glass-card p-8 md:p-10 border border-white/10"
         >
           <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-            A biweekly newsletter about product management in real life, written by someone who lives it every day.
-            I share the decisions that seemed right, the ones that seemed wrong, and what we learned from it all.
+            Bi-weekly stories on product strategy, AI, and the psychology of decision-making —
+            from real experiments inside Radar PX and beyond.
           </p>
+
+          {/* Latest Issue Preview */}
+          <div className="bg-accent-900/20 border border-accent-500/30 rounded-xl p-5 mb-8">
+            <p className="text-xs text-accent-300 font-semibold mb-2 uppercase">Latest Issue</p>
+            <h4 className="text-white font-bold mb-2">Continuous value delivery and the ship or improve dilemma</h4>
+            <p className="text-slate-400 text-sm">
+              When should you ship new features, and when should you improve what you have? A framework for balancing innovation and refinement.
+            </p>
+          </div>
 
           <div className="mb-8">
             <h3 className="text-xl font-bold text-white mb-4">What to expect:</h3>
