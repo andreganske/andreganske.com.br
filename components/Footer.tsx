@@ -87,10 +87,10 @@ export default function Footer() {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            <span>This site was created with AI assistance</span>
+            <span>{t('footer.aiGenerated')}</span>
           </div>
           <p className="text-slate-500 text-sm">
-            © {year} Andre Ganske. All rights reserved.
+            {t('contact.copyright').replace('{year}', year.toString())}
           </p>
         </div>
       </div>

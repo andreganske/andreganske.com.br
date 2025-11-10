@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const projects = [
   {
@@ -55,6 +56,7 @@ const projects = [
 export default function AIProjects() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const { t } = useLanguage()
 
   return (
     <section id="ai-projects" className="py-20 px-4 bg-white dark:bg-slate-900">
@@ -75,15 +77,15 @@ export default function AIProjects() {
               <svg className="w-5 h-5 text-accent-700 dark:text-accent-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
-              <span className="text-accent-700 dark:text-accent-200 font-medium text-sm">AI Explorations</span>
+              <span className="text-accent-700 dark:text-accent-200 font-medium text-sm">{t('aiProjects.badge')}</span>
             </div>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-            Building with AI — from automation to augmentation
+            {t('aiProjects.title')}
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-            Each project explores how intelligence can serve human judgment — not replace it.
+            {t('aiProjects.subtitle')}
           </p>
         </motion.div>
 
@@ -155,8 +157,7 @@ export default function AIProjects() {
           className="mt-12 text-center"
         >
           <p className="text-slate-600 dark:text-slate-400">
-            Each project is an experiment in applying AI to solve real-world problems,
-            from mental health and financial wellness to technical documentation and testing.
+            {t('aiProjects.description')}
           </p>
         </motion.div>
       </div>
