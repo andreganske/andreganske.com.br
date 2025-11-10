@@ -12,8 +12,8 @@ export const translations = {
     hero: {
       badge: 'Available for new opportunities',
       title: 'Andre Ganske',
-      subtitle: 'Senior Product Manager',
-      description: 'Specializing in AI & Risk Intelligence, Anti-Fraud Systems, and Product-Led Growth with 15+ years building impactful products at scale',
+      subtitle: 'Building intelligent systems that understand people, manage risk, and drive growth',
+      description: 'Senior Product Manager | AI & Risk Intelligence | Product-Led Growth | Human-Centered Automation',
       cta1: 'Get in Touch',
       cta2: 'View My Work',
     },
@@ -121,8 +121,8 @@ export const translations = {
     hero: {
       badge: 'Disponível para novas oportunidades',
       title: 'Andre Ganske',
-      subtitle: 'Senior Product Manager',
-      description: 'Especializado em IA & Inteligência de Risco, Sistemas Anti-Fraude e Product-Led Growth com mais de 15 anos construindo produtos de impacto em escala',
+      subtitle: 'Construindo sistemas inteligentes que entendem pessoas, gerenciam risco e impulsionam crescimento',
+      description: 'Senior Product Manager | IA & Inteligência de Risco | Product-Led Growth | Automação Centrada no Humano',
       cta1: 'Entrar em Contato',
       cta2: 'Ver Meu Trabalho',
     },
