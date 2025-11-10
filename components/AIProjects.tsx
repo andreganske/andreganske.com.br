@@ -50,13 +50,6 @@ const projectsMetadata = [
     tags: ['Software Architecture', 'C4 Model', 'System Design', 'LLM', 'Technical Documentation'],
   },
   {
-    key: 'adalbertorfc',
-    url: 'https://chat.openai.com/g/g-682e12d81c948191a4c2d3739525a55a-adalberto-the-rfc',
-    icon: '🧾',
-    maturity: 'Beta',
-    tags: ['Product Writing', 'RFC', 'Specification', 'LLM', 'Documentation'],
-  },
-  {
     key: 'aiplayground',
     url: '#',
     icon: '🔬',
