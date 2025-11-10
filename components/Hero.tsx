@@ -1,8 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Hero() {
+  const { t } = useLanguage()
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
       {/* Clean background gradient */}
@@ -39,7 +42,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-400"></span>
               </span>
-              Available for new opportunities
+              {t('hero.badge')}
             </div>
           </motion.div>
 
@@ -49,7 +52,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <p className="text-xl md:text-2xl text-slate-400 mb-3">Andre Ganske</p>
+            <p className="text-xl md:text-2xl text-slate-400 mb-3">{t('hero.title')}</p>
           </motion.div>
 
           {/* Main headline - value proposition */}
@@ -59,7 +62,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight max-w-5xl mx-auto"
           >
-            Building intelligent systems that understand people, manage risk, and drive growth
+            {t('hero.subtitle')}
           </motion.h1>
 
           <motion.div
@@ -77,18 +80,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg md:text-xl lg:text-2xl font-medium text-accent-200 max-w-4xl mx-auto mb-4"
           >
-            Senior Product Manager | AI & Risk Intelligence | Product-Led Growth | Human-Centered Automation
+            {t('hero.description')}
           </motion.h2>
-
-          {/* Supporting line */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            className="text-base md:text-lg text-slate-400 max-w-2xl mx-auto"
-          >
-            15+ years of product leadership building impactful solutions at scale
-          </motion.p>
 
           {/* CTA Buttons */}
           <motion.div
@@ -103,7 +96,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              View My Work
+              {t('hero.cta2')}
             </motion.a>
 
             <motion.a
@@ -112,7 +105,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Get in Touch
+              {t('hero.cta1')}
             </motion.a>
           </motion.div>
 
