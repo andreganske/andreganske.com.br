@@ -9,47 +9,112 @@ const projects = [
   {
     name: 'Mind Bloom / Call Confidence',
     url: 'https://neurobloom.com.br',
-    description: 'AI micro-SaaS that helps sales professionals overcome cold-call anxiety through simulated coaching and tone analysis.',
-    detail: 'Explores affective computing and emotional feedback for performance.',
+    description:
+      'AI micro-SaaS that helps sales professionals overcome cold-call anxiety through simulated coaching, tone analysis, and cognitive reframing.',
+    detail:
+      'Explores affective computing, emotion recognition, and behavioral reinforcement to improve confidence and communication performance.',
     icon: '🧠',
     maturity: 'Prototype',
-    tags: ['Affective Computing', 'Coaching', 'Performance'],
+    tags: ['Affective Computing', 'Behavioral Science', 'Coaching', 'Performance', 'Emotion Recognition'],
   },
   {
     name: 'Attractor',
     url: 'https://attractor.com.br',
-    description: 'AI-driven finance app for couples — aligning emotional and financial decision-making.',
-    detail: 'Applies behavioral economics and explainable AI to shared investments.',
+    description:
+      'AI-driven finance app for couples — aligning emotional and financial decision-making through shared transparency.',
+    detail:
+      'Applies behavioral economics, explainable AI, and relationship psychology to build trust around money decisions.',
     icon: '💰',
     maturity: 'Prototype',
-    tags: ['Behavioral Economics', 'FinTech', 'Explainable AI'],
+    tags: ['FinTech', 'Behavioral Economics', 'Emotional Intelligence', 'Explainable AI', 'Ephemeral UI', 'Relationship Psychology'],
   },
   {
-    name: 'Radar PX / Person Check',
+    name: 'Radar PX',
     url: '#',
-    description: 'Modular risk-intelligence platform integrating enrichment, cognitive profiling, and behavioral scoring to classify driver risk.',
-    detail: 'Reduced fraud costs by 20%, automated 5,000+ validations/month.',
+    description:
+      'Modular risk-intelligence platform integrating enrichment, cognitive profiling, and behavioral scoring to classify driver risk at scale.',
+    detail:
+      'Connects operational data with psychological insight to anticipate risk patterns before they happen — reducing fraud by 20% and saving R$1.5M/year through intelligent automation.',
     icon: '🎯',
     maturity: 'In-Production',
-    tags: ['Risk Intelligence', 'Fraud Detection', 'ML Classification'],
+    tags: ['Risk Intelligence', 'Fraud Detection', 'Behavioral Analysis', 'ML Classification', 'Human-in-the-Loop', 'MCP Architecture', 'AI Workflow', 'Agentic AI'],
   },
   {
-    name: 'PM Fofo & Adalberto (RFC/BDD)',
-    url: 'https://chatgpt.com/g/g-683f92d35c948191a4c2d3739525f62d-pm-fofo',
-    description: 'LLM-based assistants that turn discovery into structured documentation (RFCs, BDDs).',
-    detail: 'Automates the boring, amplifies clarity and context.',
+    name: 'Digha.app',
+    url: 'https://digha.app',
+    description:
+      'AI-powered assistant for 1:1 meetings and self-reflection, designed to help teams turn conversations into measurable growth.',
+    detail:
+      'Built to transform leadership rituals into feedback loops — summarizing insights, tracking progress, and improving how managers listen and coach. Although discontinued, it proved how AI can nurture healthier teams.',
+    icon: '💬',
+    maturity: 'Failed',
+    tags: ['Leadership', 'Reflection', 'AI Coaching', 'Psychological Safety', 'People Analytics', 'Behavioral Insight', 'Emotional Intelligence'],
+  },
+  {
+    name: 'PM Fofo',
+    url: 'https://chat.openai.com/g/g-683f92d35c948191a4c2d3739525f62d-pm-fofo',
+    description:
+      'LLM-based assistant that helps Product Managers translate messy discovery sessions into structured, shareable artifacts.',
+    detail:
+      'Automates the creation of RFCs, BDDs, and opportunity statements — freeing PMs to focus on insight and alignment instead of formatting.',
     icon: '📋',
-    maturity: 'In-Production',
-    tags: ['LLM', 'Documentation', 'Discovery'],
+    maturity: 'Beta',
+    tags: ['LLM', 'Product Management', 'Documentation', 'Workflow Automation', 'Discovery'],
+  },
+  {
+    name: 'Adalberto the C4',
+    url: 'https://chatgpt.com/g/g-oUNbPrO0P-adalberto-do-c4',
+    description:
+      'Conversational AI specialized in software architecture, helping teams describe and visualize systems through the C4 modeling approach.',
+    detail:
+      'Acts as a concise, human-like software architect — guiding the creation of Context, Container, Component, and Code diagrams with clarity and consistency. Designed to make architecture communication accessible to both engineers and product stakeholders.',
+    icon: '🏗️',
+    maturity: 'Beta',
+    tags: ['Software Architecture', 'C4 Model', 'System Design', 'LLM', 'Technical Documentation'],
+  },
+  {
+    name: 'Adalberto the RFC',
+    url: 'https://chat.openai.com/g/g-682e12d81c948191a4c2d3739525a55a-adalberto-the-rfc',
+    description:
+      'Conversational AI trained on real product documents to create RFCs and specs that sound human — not robotic.',
+    detail:
+      'Brings structure, empathy, and consistency to technical writing by learning from your tone, frameworks, and context.',
+    icon: '🧾',
+    maturity: 'Beta',
+    tags: ['Product Writing', 'RFC', 'Specification', 'LLM', 'Documentation'],
   },
   {
     name: 'AI Research Playground',
     url: '#',
-    description: 'Prototype hub exploring risk signal extraction from legal texts and human-in-the-loop evaluation loops.',
-    detail: 'Where new capabilities are born before they become production.',
+    description:
+      'Internal R&D hub for prototyping AI capabilities in risk analysis, legal-text understanding, and human-in-the-loop model evaluation.',
+    detail:
+      'Serves as the incubation layer for next-generation features — bridging research and production through continuous experimentation.',
     icon: '🔬',
     maturity: 'Concept',
-    tags: ['Research', 'NLP', 'Human-in-the-Loop'],
+    tags: ['Research', 'NLP', 'Explainability', 'Risk Analysis', 'Human-in-the-Loop', 'MCP Architecture', 'Agentic AI'],
+  },
+  {
+    name: 'RiskGPT',
+    url: '#',
+    description:
+      'Specialized AI agent that interprets judicial and behavioral data to classify transport-related risks with contextual accuracy.',
+    detail:
+      'Enhances decision engine by extracting nuanced legal signals and explaining model reasoning in plain language for audit-ready insights.',
+    icon: '⚖️',
+    maturity: 'Private Beta',
+    tags: ['Risk Intelligence', 'NLP', 'Decision Support', 'Explainability', 'Legal Data', 'Auditability'],
+  },
+  {
+    name: 'FeatureGPT',
+    url: '#',
+    description:
+      'AI writing companion that powers the "Feature ou Bug" newsletter — translating real product lessons into clear, narrative-driven insights.',
+    detail:
+      'Blends storytelling and strategy to turn data into meaning — helping PMs communicate outcomes, not outputs.',
+    icon: '📝',
+    maturity: 'Private Use',
+    tags: ['Writing', 'Communication', 'Strategy', 'Storytelling', 'Thought Leadership'],
   },
 ]
 
@@ -122,6 +187,10 @@ export default function AIProjects() {
                       <span className={`inline-block px-2 py-1 rounded text-xs font-bold mb-3 ${
                         project.maturity === 'In-Production' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300' :
                         project.maturity === 'Prototype' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' :
+                        project.maturity === 'Beta' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :
+                        project.maturity === 'Private Beta' ? 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' :
+                        project.maturity === 'Private Use' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300' :
+                        project.maturity === 'Failed' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
                         'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300'
                       }`}>
                         {project.maturity}
