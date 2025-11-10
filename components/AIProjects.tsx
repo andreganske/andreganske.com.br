@@ -5,51 +5,77 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-const projects = [
+// Project metadata (non-translatable configuration)
+const projectsMetadata = [
   {
-    name: 'Mind Bloom / Call Confidence',
+    key: 'mindbloom',
     url: 'https://neurobloom.com.br',
-    description: 'AI micro-SaaS that helps sales professionals overcome cold-call anxiety through simulated coaching and tone analysis.',
-    detail: 'Explores affective computing and emotional feedback for performance.',
     icon: '🧠',
     maturity: 'Prototype',
-    tags: ['Affective Computing', 'Coaching', 'Performance'],
+    tags: ['Affective Computing', 'Behavioral Science', 'Coaching', 'Performance', 'Emotion Recognition'],
   },
   {
-    name: 'Attractor',
+    key: 'attractor',
     url: 'https://attractor.com.br',
-    description: 'AI-driven finance app for couples — aligning emotional and financial decision-making.',
-    detail: 'Applies behavioral economics and explainable AI to shared investments.',
     icon: '💰',
     maturity: 'Prototype',
-    tags: ['Behavioral Economics', 'FinTech', 'Explainable AI'],
+    tags: ['FinTech', 'Behavioral Economics', 'Emotional Intelligence', 'Explainable AI', 'Ephemeral UI', 'Relationship Psychology'],
   },
   {
-    name: 'Radar PX / Person Check',
+    key: 'radarpx',
     url: '#',
-    description: 'Modular risk-intelligence platform integrating enrichment, cognitive profiling, and behavioral scoring to classify driver risk.',
-    detail: 'Reduced fraud costs by 20%, automated 5,000+ validations/month.',
     icon: '🎯',
     maturity: 'In-Production',
-    tags: ['Risk Intelligence', 'Fraud Detection', 'ML Classification'],
+    tags: ['Risk Intelligence', 'Fraud Detection', 'Behavioral Analysis', 'ML Classification', 'Human-in-the-Loop', 'MCP Architecture', 'AI Workflow', 'Agentic AI'],
   },
   {
-    name: 'PM Fofo & Adalberto (RFC/BDD)',
-    url: 'https://chatgpt.com/g/g-683f92d35c948191a4c2d3739525f62d-pm-fofo',
-    description: 'LLM-based assistants that turn discovery into structured documentation (RFCs, BDDs).',
-    detail: 'Automates the boring, amplifies clarity and context.',
+    key: 'digha',
+    url: 'https://digha.app',
+    icon: '💬',
+    maturity: 'Failed',
+    tags: ['Leadership', 'Reflection', 'AI Coaching', 'Psychological Safety', 'People Analytics', 'Behavioral Insight', 'Emotional Intelligence'],
+  },
+  {
+    key: 'pmfofo',
+    url: 'https://chat.openai.com/g/g-683f92d35c948191a4c2d3739525f62d-pm-fofo',
     icon: '📋',
-    maturity: 'In-Production',
-    tags: ['LLM', 'Documentation', 'Discovery'],
+    maturity: 'Beta',
+    tags: ['LLM', 'Product Management', 'Documentation', 'Workflow Automation', 'Discovery'],
   },
   {
-    name: 'AI Research Playground',
+    key: 'adalbertoc4',
+    url: 'https://chatgpt.com/g/g-oUNbPrO0P-adalberto-do-c4',
+    icon: '🏗️',
+    maturity: 'Beta',
+    tags: ['Software Architecture', 'C4 Model', 'System Design', 'LLM', 'Technical Documentation'],
+  },
+  {
+    key: 'adalbertorfc',
+    url: 'https://chat.openai.com/g/g-682e12d81c948191a4c2d3739525a55a-adalberto-the-rfc',
+    icon: '🧾',
+    maturity: 'Beta',
+    tags: ['Product Writing', 'RFC', 'Specification', 'LLM', 'Documentation'],
+  },
+  {
+    key: 'aiplayground',
     url: '#',
-    description: 'Prototype hub exploring risk signal extraction from legal texts and human-in-the-loop evaluation loops.',
-    detail: 'Where new capabilities are born before they become production.',
     icon: '🔬',
     maturity: 'Concept',
-    tags: ['Research', 'NLP', 'Human-in-the-Loop'],
+    tags: ['Research', 'NLP', 'Explainability', 'Risk Analysis', 'Human-in-the-Loop', 'MCP Architecture', 'Agentic AI'],
+  },
+  {
+    key: 'riskgpt',
+    url: '#',
+    icon: '⚖️',
+    maturity: 'Private Beta',
+    tags: ['Risk Intelligence', 'NLP', 'Decision Support', 'Explainability', 'Legal Data', 'Auditability'],
+  },
+  {
+    key: 'featuregpt',
+    url: '#',
+    icon: '📝',
+    maturity: 'Private Use',
+    tags: ['Writing', 'Communication', 'Strategy', 'Storytelling', 'Thought Leadership'],
   },
 ]
 
@@ -90,9 +116,9 @@ export default function AIProjects() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+          {projectsMetadata.map((project, index) => (
             <motion.div
-              key={project.name}
+              key={project.key}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
@@ -111,7 +137,7 @@ export default function AIProjects() {
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-2">
                         <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-accent-700 dark:group-hover:text-accent-300 transition-colors">
-                          {project.name}
+                          {t(`aiProjects.projects.${project.key}.name`)}
                         </h3>
                         {project.url !== '#' && (
                           <svg className="w-5 h-5 text-slate-400 group-hover:text-accent-600 dark:group-hover:text-accent-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,15 +148,19 @@ export default function AIProjects() {
                       <span className={`inline-block px-2 py-1 rounded text-xs font-bold mb-3 ${
                         project.maturity === 'In-Production' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300' :
                         project.maturity === 'Prototype' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' :
+                        project.maturity === 'Beta' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :
+                        project.maturity === 'Private Beta' ? 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' :
+                        project.maturity === 'Private Use' ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300' :
+                        project.maturity === 'Failed' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
                         'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300'
                       }`}>
                         {project.maturity}
                       </span>
                       <p className="text-slate-700 dark:text-slate-300 mb-2 leading-relaxed text-sm">
-                        {project.description}
+                        {t(`aiProjects.projects.${project.key}.description`)}
                       </p>
                       <p className="text-slate-500 dark:text-slate-500 mb-4 leading-relaxed text-sm italic">
-                        → {project.detail}
+                        → {t(`aiProjects.projects.${project.key}.detail`)}
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag) => (
