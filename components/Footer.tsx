@@ -8,11 +8,11 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   const navLinks = [
-    { label: 'Home', href: '#' },
-    { label: 'About', href: '#about' },
-    { label: 'Work', href: '#ai-projects' },
-    { label: 'Newsletter', href: '#newsletter' },
-    { label: 'Contact', href: '#contact' },
+    { labelKey: 'footer.home', href: '#' },
+    { labelKey: 'footer.about', href: '#about' },
+    { labelKey: 'footer.work', href: '#ai-projects' },
+    { labelKey: 'footer.newsletter', href: '#newsletter' },
+    { labelKey: 'footer.contact', href: '#contact' },
   ]
 
   const socialLinks = [
@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <nav className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <a
@@ -35,7 +35,7 @@ export default function Footer() {
                   href={link.href}
                   className="text-slate-400 hover:text-accent-400 transition-colors text-sm"
                 >
-                  {link.label}
+                  {t(link.labelKey)}
                 </a>
               ))}
             </nav>
@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Connect</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.connect')}</h3>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
                 <a
@@ -76,7 +76,7 @@ export default function Footer() {
 
           {/* Language Switcher */}
           <div className="flex flex-col items-start md:items-end">
-            <h3 className="text-white font-semibold mb-4">Language</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.language')}</h3>
             <LanguageSwitcher />
           </div>
         </div>
