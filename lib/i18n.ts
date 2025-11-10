@@ -106,11 +106,6 @@ export const translations = {
           description: 'Conversational AI specialized in software architecture, helping teams describe and visualize systems through the C4 modeling approach.',
           detail: 'Acts as a concise, human-like software architect — guiding the creation of Context, Container, Component, and Code diagrams with clarity and consistency. Designed to make architecture communication accessible to both engineers and product stakeholders.',
         },
-        adalbertorfc: {
-          name: 'Adalberto the RFC',
-          description: 'Conversational AI trained on real product documents to create RFCs and specs that sound human — not robotic.',
-          detail: 'Brings structure, empathy, and consistency to technical writing by learning from your tone, frameworks, and context.',
-        },
         aiplayground: {
           name: 'AI Research Playground',
           description: 'Internal R&D hub for prototyping AI capabilities in risk analysis, legal-text understanding, and human-in-the-loop model evaluation.',
@@ -270,11 +265,6 @@ export const translations = {
           name: 'Adalberto do C4',
           description: 'IA conversacional especializada em arquitetura de software, ajudando times a descrever e visualizar sistemas através da abordagem de modelagem C4.',
           detail: 'Age como um arquiteto de software conciso e humanizado — guiando a criação de diagramas de Contexto, Container, Componente e Código com clareza e consistência. Projetado para tornar a comunicação de arquitetura acessível tanto para engenheiros quanto para stakeholders de produto.',
-        },
-        adalbertorfc: {
-          name: 'Adalberto do RFC',
-          description: 'IA conversacional treinada em documentos de produto reais para criar RFCs e specs que soam humanas — não robóticas.',
-          detail: 'Traz estrutura, empatia e consistência à escrita técnica aprendendo do seu tom, frameworks e contexto.',
         },
         aiplayground: {
           name: 'AI Research Playground',
